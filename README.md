@@ -9,7 +9,7 @@ First, install and configure `vessel`
 
 [Vessel Website](https://vessel.shippingdocker.com/)
 
-1. Download `vessel-extended.sh` to same directory as `vessel` 
+1. Download `vessel-extended.sh` to same directory as `vessel`
 
     ```bash
     # using curl
@@ -25,6 +25,7 @@ First, install and configure `vessel`
 
     ```bash
     #patch vessel with customized commands
+    #as of Vessel 3.0.1, this is typically done around line 68 (or after line 66)
     source vessel-extended.sh
     ```
 
@@ -46,13 +47,24 @@ First, install and configure `vessel`
 shows the current version of Vessel Extended
 
 #### vars | env ###
-shows all exposed (exported) variables
+shows all exposed (exported) variables (similar to docker `env` command)
+
+```
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HOSTNAME=59b53a485589
+TERM=xterm
+CONTAINER_ENV=local
+XDEBUG_HOST=10.35.1.178
+WWWUSER=501
+GOSU_VERSION=1.7
+HOME=/root
+```
 
 #### rebuild ####
 rebuilds the current `app` container and restarts services
 
 #### mysql ####
-runs `mysql cli` in the mysql container
+runs `mysql cli` in the mysql container using `DB_USERNAME` `DB_PASSSWORD` credentials defined in `.env`
 
 ## Credits
 

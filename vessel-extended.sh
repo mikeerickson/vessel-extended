@@ -18,6 +18,7 @@ fi
 if [ "$1" == "rebuild" ]; then
     $COMPOSE down
     docker image rm vessel/app
+    docker image rm vessel/node
     # docker image rm ubuntu
     docker-compose build
     $COMPOSE up -d
