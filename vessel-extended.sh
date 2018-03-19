@@ -27,3 +27,9 @@ fi
 if [ $1 == "mysql" ]; then
     ./vessel exec mysql mysql -u$DB_USERNAME -p$DB_PASSWORD -h$DB_HOST
 fi
+
+# directory listing
+if [ "$1" == "dir" ]; then
+    $COMPOSE exec app ls -la --color=always
+    exit 0;
+fi
