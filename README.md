@@ -2,7 +2,7 @@
 
 ## [WIP] Much more to come
 
-Extends stock Vessel with additional utility commands
+Extends stock Vessel with additional utility commands which I find useful when working with docker.
 
 ## Installation
 
@@ -26,7 +26,7 @@ First, install and configure `vessel`
 
     ```bash
     #patch vessel with customized commands
-    #as of Vessel 3.0.1, this is typically done around line 68 (or after line 66)
+    #as of Vessel 3.0.1, this is typically done around line 68 (must be at least after line 66)
     source ./vessel-extended.sh
     ```
 
@@ -67,7 +67,7 @@ HOME=/root
 
 rebuilds the current `app` container and restarts services
 
-### mysql
+### mysql | db
 
 runs `mysql cli` in the mysql container using `DB_USERNAME` `DB_PASSSWORD` credentials defined in `.env`
 
