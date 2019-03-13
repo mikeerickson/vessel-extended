@@ -1,3 +1,6 @@
 .history/
 .history*
 .idea/
+.vscode/
+*.log
+NOTES.md
