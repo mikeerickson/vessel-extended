@@ -2,16 +2,18 @@
 
 # Colors used for status updates
 ESC_SEQ="\x1b["
-COL_RESET=${ESC_SEQ}"39;49;00m"
 COL_RED=${ESC_SEQ}"0;31m"
 COL_CYAN=${ESC_SEQ}"0;36m"
 COL_YELLOW=${ESC_SEQ}"0;33m"
+COL_RESET=${ESC_SEQ}"39;49;00m"
 
-VESSEL_VERSION="3.0.2-extended-2019.03.10"
+VESSEL_VERSION="3.0.2"
+VESSEL_VERSION_EXTENDED="Build 2019.03.10\n    Crafted with love by Codedungeon"
 
 # show vessel patched version
 if [[ "$1" == "version" || "$1" == "--version" || "$1" == "-V" ]]; then
-    printf "\n$COL_CYAN 🚧 Vessel Extended v$VESSEL_VERSION $COL_RESET\n"
+    printf "\n$COL_CYAN 🚧 Vessel Extended v$VESSEL_VERSION $COL_RESET"
+    printf "\n$COL_YELLOW    $VESSEL_VERSION_EXTENDED $COL_RESET\n"
     exit 0;
 fi
 
