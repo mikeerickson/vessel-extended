@@ -1,8 +1,8 @@
 # Vessel Extended
 
-## [WIP] Much more to come
+## Description [WIP]
 
-Extends stock Vessel with additional utility commands which I find useful when working with docker.
+Extends out of box Vessel with additional utility commands which I find useful when working with docker.
 
 ## Installation
 
@@ -26,7 +26,7 @@ First, install and configure `vessel`
 
     ```bash
     #patch vessel with customized commands
-    #as of Vessel 3.0.1, this is typically done around line 68 (must be at least after line 66)
+    #as of Vessel 4.0.2, this is typically done around line 72 (must be at least after line showVersion method)
     source ./vessel-extended.sh
     ```
 
